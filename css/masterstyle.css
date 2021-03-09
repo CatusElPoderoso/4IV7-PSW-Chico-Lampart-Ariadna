@@ -11,10 +11,10 @@ html, body {
 }
 
 .main-container{
-    border: 4px solid #d90429;
+    border: 4px solid #1f9bac;
     border-radius: 20px;
     margin: 2rem;
-    background-color: #ef233c;
+    background-color: #7adee6;
 }
 
 nav,section,footer,article,aside{
@@ -34,3 +34,4 @@ article, aside{
 nav,section,footer{
     background-color: #2b2d42;
 }
+
