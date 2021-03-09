@@ -10,6 +10,32 @@ html, body {
     background-color: white;
 }
 
+.uno a{
+    text-decoration: none;
+    display: block;
+    border: 0px solid #84A59D;
+    border-radius: 10px;
+    width: 20%;
+    height: 50px;
+    text-align: center;
+    padding-top: 1rem;
+    margin: auto;
+    background-color: #84A59D;
+    color: white;
+    font-family: Arial;
+
+    transition: 1s;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+}
+.uno a:hover{
+    background-color: #9088a7;
+    width: 10%;
+    /*transform: rotate(360deg)*/;
+}
+
 .main-container{
     border: 4px solid #1f9bac;
     border-radius: 20px;
