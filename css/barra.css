@@ -1,3 +1,39 @@
+
+/*
+.barra{
+    background-color: #032B43;
+  }
+  .barra ul li{
+      display: inline-block;
+      list-style: none;
+      
+      margin: 4px 2px;
+  }
+  .barra ul li a{
+      text-decoration: none;
+      color: #f9ffe7;
+      text-align: center;
+      font-size: 1.5rem;
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      display: block;
+      border-radius: 5px;
+      background-image: linear-gradient(40deg, #C6E2E9,#F1FFC4); 
+      padding: 1rem;
+      padding-right: 3rem;
+      
+      transition: 0.5s;
+  }
+  
+  .barra ul li a:hover{
+      color: #032B43;
+      background-image: linear-gradient(to bottom left,#F1FFC4,#FFCAAF);
+      background-color: #f9ffe7;
+      transition-timing-function: ease-out;
+  }
+  .item-r{
+      float: right;
+      padding-right: 3rem;  
+  }*/
 *{
     padding: 0;
     margin: 0;
@@ -43,6 +79,31 @@ html, body {
     padding-right: 3rem;  
 }
 
+.uno a{
+  text-decoration: none;
+  display: block;
+  border: 0px solid #84A59D;
+  border-radius: 10px;
+  width: 20%;
+  height: 50px;
+  text-align: center;
+  padding-top: 1rem;
+  margin: auto;
+  background-color: #84A59D;
+  color: white;
+  font-family: Arial;
+
+  transition: 1s;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+}
+.uno a:hover{
+  background-color: #9088a7;
+  width: 10%;
+  /*transform: rotate(360deg)*/;
+}
 .button {
     background-color: #4CAF50; /* Green */
     border: none;
