@@ -239,6 +239,7 @@ footer{
     border-radius: 50%;
     text-align: center;
     color:#fff;
+    transition: 0.5s;
 }
 .social-media-icon:hover{
     background: #fff;
