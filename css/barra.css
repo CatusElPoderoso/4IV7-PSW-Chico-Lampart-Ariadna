@@ -14,10 +14,12 @@ html, body {
 .header ul li{
     display: inline-block;
     list-style: none;
+    
+    margin: 4px 2px;
 }
 .header ul li a{
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: #f9ffe7;
     text-align: center;
     font-size: 2rem;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -31,10 +33,14 @@ html, body {
 }
 
 .header ul li a:hover{
-    color: #7f5539;
+    color: #032B43;
     /*background-image: linear-gradient(to bottom left,#F1FFC4,#FFCAAF);*/
-    background-color: #fdffb6;
+    background-color: #f9ffe7;
     transition-timing-function: ease-out;
+}
+.item-r{
+    float: right;
+    padding-right: 3rem;  
 }
 
 .button {
