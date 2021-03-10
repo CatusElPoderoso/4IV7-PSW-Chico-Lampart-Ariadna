@@ -7,6 +7,10 @@
 html, body {
     background-color: #f9ffe7;
 }
+
+.header{
+  background-color: #032B43;
+}
 .header ul li{
     display: inline-block;
     list-style: none;
@@ -18,17 +22,18 @@ html, body {
     font-size: 2rem;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     display: block;
-    border-radius: 25px;
-    float: right;
-    background-image: linear-gradient(40deg, #C6E2E9,#F1FFC4);
+    border-radius: 5px;
+    /*background-image: linear-gradient(40deg, #C6E2E9,#F1FFC4); */
     padding: 1rem;
-    padding-right: 8rem; /* Establecemos el espacio entre las viñetas y el list item */
+    /*padding-right: 3rem;*/
     
-    transition: all 1s;
+    transition: all 0.5s;
 }
 
 .header ul li a:hover{
-    background-image: linear-gradient(to bottom left,#F1FFC4,#FFCAAF);
+    color: #7f5539;
+    /*background-image: linear-gradient(to bottom left,#F1FFC4,#FFCAAF);*/
+    background-color: #fdffb6;
     transition-timing-function: ease-out;
 }
 
