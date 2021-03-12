@@ -49,9 +49,7 @@ html, body {
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    transition: transform .2s ease-in-out;
 }
-
 .head{
     padding: 0;
     height: 100%;
@@ -102,6 +100,11 @@ html, body {
 .menu-navegacion a{
     color: #fff;
     text-decoration: none;
+
+    transition: 1s;
+}
+.menu-navegacion a:hover{
+    color: #d9ed92;
 }
 
 .titulo{
