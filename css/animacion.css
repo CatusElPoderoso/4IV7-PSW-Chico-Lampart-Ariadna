@@ -1,0 +1,68 @@
+/*animaciones con condicionales*/
+@keyframes animacion_test{
+    from{
+        background-color: red;
+    }
+    to{
+        background-color: yellow;
+    }
+}
+/*gira wuuuu*/
+@keyframes girar{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+/*nose, pero gira*/
+@keyframes label-animacion{
+    from{
+        transform: rotate(0deg);
+        margin-left: (0);
+    }
+    to{
+        transform: rotate(180deg);
+        margin-left: (85vw);
+    }
+}
+
+.container-label{
+    border: 5px solid rgb(12,12,12);
+    width: 100%;
+    padding: 1rem;
+}
+.label{
+    width: 64px;
+    background-color: red;
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 15px;
+    text-align: center;
+
+    animation-name: label-animacion ;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.loader{
+    width: 64px;
+    height: 64px;
+    border: 5px solid rgb(15,243,67);
+    border-top: 5px solid rgb(17,13,235);
+    border-radius: 50%;
+    animation: girar 2s linear infinite;
+}
+.loader-double{
+    width: 64px;
+    height: 64px;
+    border: 16px solid rgb(13,245,220);
+    border-top: 16px solid rgb(235,45,142);
+    border-bottom: 8px solid rgb(14,12,34);
+    border-radius: 50%;
+    animation: girar 2s ease-in-out infinite;
+}

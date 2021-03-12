@@ -8,6 +8,31 @@ html, body {
     background-color: white;
     font-family: Poppins;
 }
+.animated_div{
+    width:30px;
+    height:30px;
+    background: #43e97b;
+    position: relative;
+    font-weight:bold;
+    font-size:20px;
+    padding:10px;
+    
+    animation:animated_div 5s 1;
+    -moz-animation:animated_div 5s 1;
+    -webkit-animation:animated_div 5s 1;
+    -o-animation:animated_div 5s 1;
+    border-radius:5px;
+    -webkit-border-radius:5px;
+    }
+    
+    @keyframes animated_div{
+    0% {transform: rotate(0deg);left:30px;}
+    25% {transform: rotate(20deg);left:30px;}
+    50% {transform: rotate(0deg);left:500px;}
+    55% {transform: rotate(0deg);left:500px;}
+    70% {transform: rotate(0deg);left:500px;background: #fee140;}
+    100% {transform: rotate(-360deg);left:10px;}
+    }
 
 .contenedor{
     width: 90%;
@@ -204,7 +229,7 @@ html, body {
 /*Footer*/
 
 footer{
-    background:rgb(137, 43, 100);
+    background: rgb(23, 128, 161);
     padding-bottom: 0.1px;
 }
 .footer-content{
@@ -243,7 +268,7 @@ footer{
 }
 .social-media-icon:hover{
     background: #fff;
-    color: #1780A1;
+    color: #B7094C;
 }
 .social-media-icon i{
     font-size: 30px;
