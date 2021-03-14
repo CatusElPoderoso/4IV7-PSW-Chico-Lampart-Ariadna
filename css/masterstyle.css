@@ -21,7 +21,7 @@ html, body {
     -moz-animation:animated_div 5s 1;
     -webkit-animation:animated_div 5s 1;
     -o-animation:animated_div 5s 1;
-    border-radius:5px;
+    border-radius:5px;  
     -webkit-border-radius:5px;
     }
     
@@ -108,8 +108,8 @@ html, body {
 }
 
 .titulo{
-    font-size: 60px;
-    margin-bottom: 15px;
+    font-size: 4vw;
+    margin-bottom: 3vw;
 }
 .copy{
     font-weight: 300px;
@@ -121,7 +121,7 @@ html, body {
 .subtitulo{
     text-align: center;
     font-weight: 300px;
-    font-size: 2.5rem;
+    font-size: 3vw;
     color: rgb(69, 94, 137);
 }
 
@@ -208,6 +208,58 @@ html, body {
     cursor: pointer;
 }
 
+/* Estudios */
+
+.contenedor2 {
+	max-width: 1000px;
+	width: 90%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+}
+.contenido p{
+	margin-bottom: 20px;
+	line-height: 30px;
+	color: #525151;
+    align-items: center;
+}
+.contenido .subtitulo2 {
+	font-weight: normal;
+	padding-top: 2vw;
+    color: #455e89;
+    font-size: 2.8vw;
+}
+.contenido .fecha {
+	font-size: 1rem;
+	color: #B5B5B5;
+}
+
+aside {
+	min-width: 30%;
+	margin: 40px 20px 20px 0;
+	height: 100%;
+	background: #364868;
+	padding: 20px;
+	border-radius: 3px;
+	box-sizing: border-box;
+    position: sticky;
+    top: 20px;
+}
+
+aside .titulo {
+	font-weight: normal;
+	font-size: 24px;
+	margin-bottom: 20px;
+	color: #b292ed;
+}
+
+aside .indice a {
+	display: block;
+	margin-bottom: 10px;
+	color: #ffff;
+}
+
+
 /*Especialidades*/
 
 .especialidades{
@@ -236,7 +288,7 @@ html, body {
 /*Footer*/
 
 footer{
-    background: rgb(23, 128, 161);
+    background: #364868;
     padding-bottom: 0.1px;
 }
 .footer-content{
@@ -275,7 +327,7 @@ footer{
 }
 .social-media-icon:hover{
     background: #fff;
-    color: #B7094C;
+    color: #b7094c;
 }
 .social-media-icon i{
     font-size: 30px;
