@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html, body {
+    background-color: white;
+    font-family: Poppins;
+    color: #b7b7a4;
+}
+
+/* Partes importantes */
+.titulo{
+    font-size: 4vw;
+    margin-bottom: 3vw;
+}
+.subtitulo{
+    font-weight: 300px;
+    font-size: 2vw;
+}
+.contenedor{
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: auto;
+    padding: 60px 0px;
+}
+:root{
+    scroll-behavior: smooth;
+}
+
+/* Imagen de fondo y titulo */
+.header{
+    height: 100vh;
+    background-image: linear-gradient(to top, #d4fc7950 0%, #96e6a150 100%), url(../img/hobbies/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+.head{
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+/* Musica */
+aside {
+	min-width: 30%;
+	margin: 20px 20px 20px 0;
+	height: 100%;
+	/* background-image: linear-gradient(to top, #d4fc79, #96e6a1); */
+	padding: 20px;
+	border-radius: 3px;
+	box-sizing: border-box;
+    position: sticky;
+    top: 20px;
+    border-radius: 5px;
+}
+
+/* imágenes */
+.logo-genshin{
+    width: 40%;
+    display:block;
+    margin:auto;
+}
+.mihoyo{
+    width: 60%;
+    display:block;
+    margin:auto;
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.img{
+    width:30%;
+    display:block;
+    margin:auto;
+}
+.video{
+    display:block;
+    margin:auto;
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
