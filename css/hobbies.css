@@ -23,6 +23,7 @@ html, body {
     overflow: hidden;
     margin: auto;
     padding: 60px 0px;
+    font-size: 1.2vw;
 }
 :root{
     scroll-behavior: smooth;
@@ -57,7 +58,7 @@ aside {
 	border-radius: 3px;
 	box-sizing: border-box;
     position: sticky;
-    top: 20px;
+    top: 10px;
     border-radius: 5px;
 }
 
@@ -81,6 +82,7 @@ aside {
     width:30%;
     display:block;
     margin:auto;
+    border-radius: 5px;
 }
 .video{
     display:block;
