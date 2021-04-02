@@ -30,6 +30,13 @@ body{
     display: flex;
     align-items: center;
 }
+.contenedor2{
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    display: flex;
+    align-items: center;
+}
 .img{
     width: 100%;
     display: block;
@@ -75,6 +82,24 @@ body{
 
     justify-content: space-evenly;
     flex-wrap: wrap;
+}
+.formulario-submit2{
+    background: #bde0fe;
+    font-size: 1vw;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    align-items: center;
+    text-align: center;
+
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.formulario-submit2:hover{
+    color:#bde0fe;
+    background-color:#fff;
 }
 
 /* clases para el js */
