@@ -38,10 +38,6 @@ function operacion(){
     document.formulario.resultado.value=total;
 }
 
-
-
-
-
 function borrar(){
     document.formulario.numero1.value="";
     document.formulario.numero2.value="";
