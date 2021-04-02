@@ -16,25 +16,12 @@ function validarn(e){
 function operacion(){
 
     var valor1 = document.formulario.numero1.value;
-    var valor2 = document.formulario.numero2.value;
-
     var primero = parseFloat(valor1);
-    var segundo = parseFloat(valor2);
     var total = 0;
 
-        if(primero == segundo){
-            console.log('es igual, se multiplican');
-            total = primero * segundo;
-        }
-        if(primero > segundo){
-            console.log('el primer numero es mayor, se restan');
-            total = primero - segundo;
-        }
-        if(primero < segundo){
-            console.log('el segundo numero es mayor, se suman');
-            total = primero + segundo;
-        }
-    console.log(total);
+    descuento = primero * 0.15;
+    total = primero - descuento;
+
     document.formulario.resultado.value=total;
 }
 
