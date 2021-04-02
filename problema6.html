@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 6</title>
+    <link rel="stylesheet" href="css/problemas1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="js\prob\problema6.js" ></script>
+</head>
+<body>
+
+    <form method="get" class="formulario" name="formulario" id="formulario"
+        action="problema6.html" onsubmit="return validar(this)">
+
+        <h1 class="titulo">Problemas (1-10)</h1>
+        
+        <table class="default">
+            <tr class="p-titulo">
+                <th colspan="3">Problema 6</th>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Realizar un algoritmo que calcule la edad de una persona:
+                </td>
+            </tr>
+            <tr>
+                <th class="contenedor">Año de nacimiento: </th>
+                <td><input type="text" class="formulario-input" name="numero1"
+                    id="p1-numero1" onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <th class="contenedor">Mes de nacimiento: </th>
+                <td><input type="text" class="formulario-input" name="numero2"
+                    id="p1-numero2" onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <th class="contenedor">Día de nacimiento:</th>
+                <td><input type="text" class="formulario-input" name="numero3"
+                    id="p1-numero2" onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    Usted tiene: 
+                    <br>
+                    <br>
+                </th>
+            </tr>
+            <tr>
+                <th class="contenedor">Años: </th>
+                <td><input type="text" class="formulario-respuesta" name="resultado1"
+                    id="resultado1" readonly="readonly"></td>
+            </tr>
+            <tr>
+                <th class="contenedor">Meses: </th>
+                <td><input type="text" class="formulario-respuesta" name="resultado2"
+                    id="resultado2" readonly="readonly"></td>
+            </tr>
+            <tr>
+                <th class="contenedor">Días: </th>
+                <td><input type="text" class="formulario-respuesta" name="resultado3"
+                    id="resultado3" readonly="readonly"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" value="Borrar" class="formulario-submit"
+                    name="borrard" onclick="borrar()"></td>
+                <td><input type="button" value="Operacion"  class="formulario-submit"
+                    name="enviar" onclick="operacion()"></td>
+            </tr>
+        </table>
+    </form>
+
+    <script src="js\prob\problema6.js" type="text/javascript"></script>
+
+</body>
+</html>
