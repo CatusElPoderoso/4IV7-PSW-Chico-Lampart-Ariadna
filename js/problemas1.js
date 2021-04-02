@@ -23,24 +23,22 @@ function operacion(){
     var total = 0;
 
         if(primero == segundo){
-            console.log('es igual');
+            console.log('es igual, se multiplican');
 
             total = primero * segundo;
-            document.formulario.resultado.value=total;
         }
         if(primero > segundo){
-            console.log('el primer numero es mayor');
+            console.log('el primer numero es mayor, se restan');
 
             total = primero - segundo;
-            document.formulario.resultado.value=total;
         }
         if(primero < segundo){
-            console.log('el segundo numero es mayor');
+            console.log('el segundo numero es mayor, se suman');
 
             total = primero + segundo;
-            document.formulario.resultado.value=total;
         }
     console.log(total);
+    document.formulario.resultado.value=total;
 }
 
 function borrar(){
