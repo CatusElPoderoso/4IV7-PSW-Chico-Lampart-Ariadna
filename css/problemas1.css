@@ -5,6 +5,7 @@
 body{
     margin: 0;
     font-family:Poppins;
+    text-align: justify;
 }
 .formulario{
     width: 500px;
@@ -28,6 +29,11 @@ body{
     align-self: center;
     display: flex;
     align-items: center;
+}
+.img{
+    width: 100%;
+    display: block;
+    margin-bottom: 15px;
 }
 .p-titulo{
     text-align: center;
