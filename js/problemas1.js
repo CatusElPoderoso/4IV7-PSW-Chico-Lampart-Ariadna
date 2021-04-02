@@ -1,5 +1,5 @@
 
-// Problema 1
+// Problema 6
 /*
     Leer dos números; si son iguales que los multiplique, si el primero es mayor
     que el segundo, que los reste y si no que los sume.
