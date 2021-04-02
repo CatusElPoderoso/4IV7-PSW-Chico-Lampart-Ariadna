@@ -18,22 +18,29 @@ function operacion(){
     var valor1 = document.formulario.numero1.value;
     var valor2 = document.formulario.numero2.value;
 
-    var numero1 = parseFloat(valor1);
-    var numero2 = parseFloat(valor2);
+    var primero = parseFloat(valor1);
+    var segundo = parseFloat(valor2);
     var total = 0;
 
-        if(numero1=numero2){
-            total = numero1 * numero2;
+        if(primero == segundo){
+            console.log('es igual');
+
+            total = primero * segundo;
             document.formulario.resultado.value=total;
         }
-        if(numero1>numero2){
-            total = numero1 - numero2;
+        if(primero > segundo){
+            console.log('el primer numero es mayor');
+
+            total = primero - segundo;
             document.formulario.resultado.value=total;
         }
-        if(numero1<numero2){
-            total = numero1 + numero2;
+        if(primero < segundo){
+            console.log('el segundo numero es mayor');
+
+            total = primero + segundo;
             document.formulario.resultado.value=total;
         }
+    console.log(total);
 }
 
 function borrar(){
