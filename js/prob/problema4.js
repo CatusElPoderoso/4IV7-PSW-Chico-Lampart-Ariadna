@@ -28,6 +28,8 @@ function operacion(){
     var segundo = parseFloat(valor2);
     var tercero = parseFloat(valor3);
 
+    if(final.length < 3 && proyec.length < 3 && valor1.length < 3 && valor2.length < 3 && valor3.length < 3){
+
     promedio1 = (primero + segundo + tercero)/3;
     promedio2 = (promedio1 * 0.55)/10;
 
@@ -37,6 +39,12 @@ function operacion(){
     var total = (promedio2 + examen1 + trabajo1) * 10;
 
     document.formulario.resultado.value = total;
+    }
+    else{
+        console.log("Error");
+        alert("No puede poner más de cuatro dígitos en los cuadros");
+        borrar();
+    }
 }
 
 function borrar(){
