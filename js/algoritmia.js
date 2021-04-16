@@ -93,36 +93,41 @@ function problema3(){
     // sólo se aceptan letras y comas
     var letras = /^[A-Za-z,]+$/;
         if(document.querySelector('#p3-input').value.match(letras)){
+            
             console.log('piola');
-            return true;
+
+            var p3_input = document.querySelector('#p3-input').value;
+            //tenemos que detectar el espacio, tendria que dividir la cadena y colocarla
+            //dentro de un array
+        
+            // separamos las palabras ingresadas
+            var p3_array = p3_input.split(',');
+                console.log('La cadena original es: "' + p3_input + '"');
+                console.log('El separador es: "' + ',' + '"');
+                console.log('El array tiene '+ p3_array.length + " elementos: ");
+
+                for (var i=0; i < p3_array.length; i++) {
+                   console.log(p3_array[i]);
+
+                }
+            
+            var p3_res = '';
+        
+        
+            p3_array.forEach(function (palabra, i){
+                if(i != 0 || i != p3_array.length) p3_res += ' ';
+                p3_res += palabra;
+            });
+        
+            document.querySelector('#p3-output').textContent = p3_res;
+        
         }else{
         console.log('truste');
-        // alert('Por favor, ingrese únicamente letras y espacios');
+        alert('Por favor, ingrese únicamente letras y espacios');
+        return false;
         }
         
     
-    var p1_input = document.querySelector('#p1-input').value;
-    //tenemos que detectar el espacio, tendria que dividir la cadena y colocarla
-    //dentro de un array
-
-    var p1_array = p1_input.split(' ').reverse();
-
-    
-
-      //dentro de un array
-      //dentrodeunarray
-      //alreves
-      //separar
-    
-    var p1_res = '';
-
-
-    p1_array.forEach(function (palabra, i){
-        if(i != 0 || i != p1_array.length) p1_res += ' ';
-        p1_res += palabra;
-    });
-
-    document.querySelector('#p1-output').textContent = p1_res;
 
 
 }
