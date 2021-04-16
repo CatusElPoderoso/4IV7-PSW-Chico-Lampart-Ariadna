@@ -109,13 +109,20 @@ function problema3(){
                 for (var i=0; i < p3_array.length; i++) {
                    console.log(p3_array[i]);
 
+                    p3_a = p3_array[i].indexOf('a');
+                    // console.log(p3_a)
+
+                    if(p3_array[i].indexOf("a") !== -1) {
+                        console.log('no sé qué palabra sea, pero tiene a xd');
+                    }
+
                 }
             
             var p3_res = '';
         
         
             p3_array.forEach(function (palabra, i){
-                if(i != 0 || i != p3_array.length) p3_res += ' ';
+                if(i != 0 || i != p3_array.length) p3_res += ',';
                 p3_res += palabra;
             });
         
