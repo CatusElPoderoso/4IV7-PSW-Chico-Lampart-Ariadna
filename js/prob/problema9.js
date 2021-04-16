@@ -1,4 +1,3 @@
-
 // Problema 9
 /*
     Determinar la cantidad de dinero que recibirá un trabajador por concepto de las horas extras 
