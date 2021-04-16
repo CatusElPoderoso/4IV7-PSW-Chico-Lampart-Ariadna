@@ -85,3 +85,44 @@ function problema2(){
 
 
 //el tres queda de tarea wiiiiiiiiiii y hago el 1 wiiiiiiiiiii
+
+// problema 3
+
+function problema3(){
+
+    // sólo se aceptan letras y comas
+    var letras = /^[A-Za-z,]+$/;
+        if(document.querySelector('#p3-input').value.match(letras)){
+            console.log('piola');
+            return true;
+        }else{
+        console.log('truste');
+        // alert('Por favor, ingrese únicamente letras y espacios');
+        }
+        
+    
+    var p1_input = document.querySelector('#p1-input').value;
+    //tenemos que detectar el espacio, tendria que dividir la cadena y colocarla
+    //dentro de un array
+
+    var p1_array = p1_input.split(' ').reverse();
+
+    
+
+      //dentro de un array
+      //dentrodeunarray
+      //alreves
+      //separar
+    
+    var p1_res = '';
+
+
+    p1_array.forEach(function (palabra, i){
+        if(i != 0 || i != p1_array.length) p1_res += ' ';
+        p1_res += palabra;
+    });
+
+    document.querySelector('#p1-output').textContent = p1_res;
+
+
+}
