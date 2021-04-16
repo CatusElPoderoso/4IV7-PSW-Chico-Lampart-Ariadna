@@ -89,6 +89,20 @@ table.problema-table{
     outline: 1px solid #fcd5ce;
 }
 
+.index{
+    background: #fcd5ce;
+    color: #997b66;
+    height:100%;
+    padding: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    position: relative;
+}
+
 td{
     padding-bottom: 1rem;
 }
