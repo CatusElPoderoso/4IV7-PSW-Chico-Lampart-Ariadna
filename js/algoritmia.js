@@ -86,55 +86,75 @@ function problema2(){
 
 //el tres queda de tarea wiiiiiiiiiii y hago el 1 wiiiiiiiiiii
 
+
 // problema 3
 
 function problema3(){
 
     // sólo se aceptan letras y comas
-    var letras = /^[A-Za-z,]+$/;
+    var letras = /^[A-Z,]+$/;
         if(document.querySelector('#p3-input').value.match(letras)){
             
             console.log('piola');
 
             var p3_input = document.querySelector('#p3-input').value;
-            //tenemos que detectar el espacio, tendria que dividir la cadena y colocarla
-            //dentro de un array
+            //tenemos que detectar la coma que divide la cadena y meterlo dentro de un array
         
             // separamos las palabras ingresadas
             var p3_array = p3_input.split(',');
                 console.log('La cadena original es: "' + p3_input + '"');
-                console.log('El separador es: "' + ',' + '"');
+                // console.log('El separador es: "' + ',' + '"');
                 console.log('El array tiene '+ p3_array.length + " elementos: ");
-
-                for (var i=0; i < p3_array.length; i++) {
-                   console.log(p3_array[i]);
-
-                    p3_a = p3_array[i].indexOf('a');
-                    // console.log(p3_a)
-
-                    if(p3_array[i].indexOf("a") !== -1) {
-                        console.log('no sé qué palabra sea, pero tiene a xd');
-                    }
-
-                }
+                var cuenta_a = 0;
+                // console.log(p3_array);
             
-            var p3_res = '';
+                
+                for (var i=0; i < p3_array.length; i++) {
+                    console.log(p3_array[i]);
+                    // console.log(p3_array[0]);
+
+                    var p3_a = 0;
+                    var p3_res = '';
         
-        
-            p3_array.forEach(function (palabra, i){
-                if(i != 0 || i != p3_array.length) p3_res += ',';
-                p3_res += palabra;
-            });
+                    // p3_array.forEach(p3_array.indexOf('a'), p3_a);
+
+                    // p3_array.forEach(function (palabra, i){
+                    //     if(i != 0 || i != p1_array.length) p1_res += ' ';
+                    //     p1_res += palabra;
+                    // });
+                        
+                        var p3_A = p3_array[i].indexOf('A');
+    
+                        if(p3_a !== -1 || p3_A !== -1){
+                            cuenta_a ++;
+                            console.log('no sé qué palabra sea, pero tiene a xd' , cuenta_a);
+                        }
+                        
+                        // console.log(total);
+                
+                    // cuenta caracteres
+
+                    let letra = p3_array[i].toLowerCase();
+                    let arreglo=[];
+                    str = p3_input.split('');
+
+                    str.map(n => {
+                        if(n.toLowerCase() === letra){
+                            arreglo.push(n);
+                        } 
+                        
+                    })
+
+                    document.querySelector('#p3-output').textContent = p3_res;
+                
+                }
         
             document.querySelector('#p3-output').textContent = p3_res;
         
         }else{
         console.log('truste');
-        alert('Por favor, ingrese únicamente letras y espacios');
+        alert('Por favor, ingrese únicamente letras en mayúsculas sin espacios');
         return false;
         }
         
-    
-
-
 }
