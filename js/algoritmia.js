@@ -177,6 +177,7 @@ function problema3(){
                         var p3_Y = p3_array[i].indexOf('Y');
                         var p3_Z = p3_array[i].indexOf('Z');
     
+                        
                         if(p3_A !== -1){
                             cuenta_a ++;
                             console.log('esta palabra tiene a' , cuenta_a);
