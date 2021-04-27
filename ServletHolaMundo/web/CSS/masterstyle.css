@@ -1,0 +1,61 @@
+
+*{
+    box-sizing: border-box;
+    padding: 0px, 0px;
+    margin: 10px;
+    
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    text-align: justify;
+    background-color: white;
+    color: #686860;
+}
+em{
+    font-style: bold;
+}
+
+.container {
+    background-color: #e8e8e4;
+}
+.formulario{
+    width: 600px;
+    max-width: 100%;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.boton{
+    background-color: #979dac;
+    color: #fff;
+    font-size: 1vw;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.ingresar{
+    background-color: #c9e75a;
+}
+.borrar{
+    background: #f8b67d;
+}
+
+.contendorConsultar {
+
+}
+
+.contenedorEliminar {
+
+}
+
+.contenedorActualizar {
+
+}
