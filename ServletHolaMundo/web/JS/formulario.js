@@ -24,12 +24,11 @@ function borrar(){
     // solo se aceptan numeros sin espacios
     var numeros = /^[0-9]+$/;
 
-    if((document.querySelector('#eliminar').value.match(numeros)) && 
-            (document.querySelector('#eliminar').value.trim() !== "")){
+    if(document.querySelector('#eliminar').value.match(numeros) && document.querySelector('#eliminar').value.trim()!==""){
         console.log('solo hay números');
         return true;
     }
-        if(document.querySelector('#eliminar').value.trim() == ""){
+        if(document.querySelector('#eliminar').value.trim()==""){
             console.log('hay espacios vacíos en borrar usuario');
             alert('Por favor, ingrese el ID del usuario que desea eliminar');
             event.preventDefault()
@@ -45,11 +44,11 @@ function gestionar(){
     var numeros = /^[0-9]+$/;
     
     if((document.querySelector('#actualizar').value.match(numeros)) && 
-            (document.querySelector('#actualizar').value.trim() !== "")){
+            (document.querySelector('#actualizar').value.trim()!=="")){
         console.log('solo hay números');
         return true;
     }
-        if(document.querySelector('#actualizar').value.trim() == ""){
+        if(document.querySelector('#actualizar').value.trim()==""){
             console.log('hay espacios vacíos en gestionar usuario');
             alert('Por favor, ingrese el ID del usuario que desea cambiar');
             event.preventDefault()

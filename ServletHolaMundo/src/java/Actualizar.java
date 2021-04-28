@@ -1,4 +1,3 @@
-
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -24,128 +23,53 @@ public class Actualizar extends HttpServlet {
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
      *
-     * @param request servlet request peticiones por parte del cliente
-     * @param response servlet response son las respuestas por parte del
-     * servidor
+     * @param request servlet request
+     * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
-     */
-    /*
-    el servlet para poderse conectar con la bd, es necesario inicializar sus elementos
-    voy a necesitar de 3 objetos que vienen de la clase sql
      */
     private Connection con;
     private Statement set;
     private ResultSet rs;
-
+    
     //vamos a crear el metodo constructor
-    @Override
-    public void init(ServletConfig cfg) throws ServletException {
+    
+    //vamos a crear el metodo constructor
+    
+    public void init(ServletConfig cfg) throws ServletException{
         //para conectarnos con la bd
         String url = "jdbc:mysql:3306//localhost/registro";
-        //driver:gestorbd:puerto//IP/nombrebd
-
+                    //driver:gestorbd:puerto//IP/nombrebd
+                    
         String userName = "root";
         String password = "servidorxd";
-
-        try {
-
+        
+        try{
+            
             Class.forName("com.mysql.jdbc.Driver");
             /*
             a veces el driver ya maneja por defecto el puerto de comunicacion
             es por ello que pueden mandar un error, en ese caso
             url = "jdbc:mysql://localhost/registro4iv7";
-             */
+            */
             url = "jdbc:mysql://localhost/registro";
             con = DriverManager.getConnection(url, userName, password);
             set = con.createStatement();
-
+            
             System.out.println("Se ha conectado a la BD");
-
-        } catch (Exception e) {
+        
+        }catch(Exception e ){
             System.out.println("No se ha conectado a la BD");
             System.out.println(e.getMessage());
             System.out.println(e.getStackTrace());
-
+        
         }
     }
-
-    protected void processRequest(HttpServletRequest request,
-            HttpServletResponse response)
+    
+    
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-
-            //manipular los datos del formulario
-            String nom, appat, appmat, correo;
-            int edad, id;
-
-            nom = request.getParameter("nombre");
-            appat = request.getParameter("appat");
-            appmat = request.getParameter("appmat");
-            correo = request.getParameter("email");
-
-            id = Integer.parseInt(request.getParameter("id_usu"));
-            edad = Integer.parseInt(request.getParameter("edad"));
-
-            try {
-
-                String q = "update usuarios set nom_usu='" + nom + "',appat_usu='" + appat + "',apmat_usu='" + appmat + "',edad=" + edad + ",email_usu='" + correo + "' where id_usu=" + id;
-                set.executeUpdate(q);
-
-                String ql = "select from usuarios where id_usu=" + id;
-
-                set = con.createStatement();
-
-                out.println("<!DOCTYPE html>");
-                out.println("<html>");
-                out.println("<head>");
-                out.println("<title>Actualizar</title>");
-                out.println("</head>");
-                out.println("<body>"
-                        + "<br>Tu nombre es:" + nom);
-                out.println("<br>"
-                        + "Tu Apellido Paterno es:" + appat
-                        + "<br>"
-                        + "Tu Apellido Materno es:" + appmat
-                        + "<br>"
-                        + "Tu Edad es:" + edad
-                        + "<br>"
-                        + "Tu correo electronico es:" + correo
-                        + "<br>"
-                        + "<br>"
-                        + "<a href='index.html'>Regresar al Formulario</a>"
-                        + "<br>");
-                out.println("<a href='Consultar'>Consultar la Tabla General de Usuarios</a>");
-                out.println("</body>");
-                out.println("</html>");
-
-                System.out.println("Consulta exitosa");
-                set.close();
-                con.close();
-
-                System.out.println("Datos actualizados en la tabla");
-
-            } catch (Exception e) {
-
-                System.out.println(e.getMessage());
-                System.out.println(e.getStackTrace());
-                out.println("<!DOCTYPE html>");
-                out.println("<html>");
-                out.println("<head>");
-                out.println("<title>Registro de Usuarios</title>");
-                out.println("</head>");
-                out.println("<body>"
-                        + "<h1>No se pudo registrar, hubo un error</h1>"
-                        + "<a href='index.html'>Regresar al Formulario</a>");
-
-                out.println("</body>");
-                out.println("</html>");
-            }
-
-        }
-
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -160,7 +84,7 @@ public class Actualizar extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        
     }
 
     /**
@@ -174,24 +98,68 @@ public class Actualizar extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<link rel=\"stylesheet\" href=\"./CSS/masterstyle.css\">");
+            out.println("<title>Servlet Eliminar</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<table class=\"formulario\">"
+                    + "<tr><td><label>Nombre:</label></td>"
+                    + "<td><input type=\"text\" name=\"nombre_2\" id=\"nombre_2\"></td></tr>");
+            out.println("");
+            out.println("");
+            out.println("");
+            out.println("");
+            
+            String nombre2 = request.getParameter("nombre_2");
+            int id;
+            
+            id = Integer.parseInt(request.getParameter("idactualizar"));
+            
+            /*
+            para poder cambiar es 
+            UPDATE mregistro SET appat_usu = variable1 where id_usu = variable2
+            */
+            String q = "UPDATE registro SET nom_usu =" + nombre2 + "where id_usu = " + id;
+            
+            out.println("<tr><td colspan='2'><input class=\"boton ingresar\" type=\"submit\" "
+                    + "value=\"Actualizar Datos\" onclick=\"caracteres()\">"
+                    + "</td></tr>");
+            
+            try{
+                
+                set.executeUpdate(q);
+                System.out.println("Registro eliminado con exito");
+                
+                out.println("<h1 class='titulo'>Registro Eliminado</h1>");
+            }catch(Exception e){
+                out.println("<h1 class='titulo'>Registro No Eliminado, sucedio un error</h1>");
+                System.out.println("Error al eliminar el registro");
+                System.out.println(e.getMessage());
+                System.out.println(e.getStackTrace());
+            
+            }
+
+            out.println("<div class='encimar'><a href='index.html' class='boton'>Regresar al Formulario</a>"
+                    + "<br>"
+                    + "<a href='Registro' class='boton'>Registrar un Nuevo Usuario</a>"
+                    + "<br>"
+                    + "<a href='Consultar' class='boton'>Consultar la Tabla General de Usuarios</a></div>");
+            out.println("</body>");
+            out.println("</html>");
+        }
     }
 
     /**
      * Returns a short description of the servlet.
      *
+     * @return a String containing servlet description
      */
-    @Override
-    public void destroy() {
-        try {
-            con.close();
-
-        } catch (Exception e) {
-            super.destroy();
-
-        }
-    }
-
     @Override
     public String getServletInfo() {
         return "Short description";
