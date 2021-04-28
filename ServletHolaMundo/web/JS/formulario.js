@@ -76,7 +76,7 @@ function cambiar(){
 
             }
         if(document.querySelector('#nombre_2').value.match(letras) && document.querySelector('#appat_2').value.match(letras) &&
-            document.querySelector('#appmat_2').value.match(letras) && document.querySelector('#edad_2').value.match(letras)){
+            document.querySelector('#apmat_2').value.match(letras) && document.querySelector('#edad_2').value.match(letras)){
 
                 console.log('Todos los campos contienen letras');
 
