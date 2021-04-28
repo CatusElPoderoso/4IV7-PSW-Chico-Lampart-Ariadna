@@ -99,8 +99,9 @@ public class Actualizar extends HttpServlet {
                 out.println("<!DOCTYPE html>");
                 out.println("<html>");
                 out.println("<head>");
-                out.println("<title>Registro de Usuarios</title>");
+                out.println("<title>Gestión de Usuarios</title>");
                 out.println("</head>");
+                out.println("<link rel=\"stylesheet\" href=\"./CSS/masterstyle.css\">");
                 out.println("<body>"
                         + "<br>Tu nombre es:" + nom);
                 out.println("<br>"
