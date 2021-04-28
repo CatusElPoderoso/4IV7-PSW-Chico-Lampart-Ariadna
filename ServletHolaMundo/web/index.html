@@ -57,20 +57,50 @@
         </div>
         
         <br>
-
-        <div class="container">
-            <form method="post" name="formulariogestionar" action="Actualizar">
-                <label>Ingresa el ID del usuario que deseas cambiar</label>
-                <input type="number" name="idactualizar" id="actualizar" min="01" max="99" size="2"  >
-                <input class="boton ingresar" type="submit" value="Gestionar Usuario" onclick="gestionar()">
-            </form>
-        </div>
-
-        <br>
-
+        
         <div class="container centrar">
             <form method="get" name="formularioconsultar" action="Consultar">
                 <input class="boton" type="submit" value="Consultar Tabla General de Usuarios" >
+            </form>
+        </div>
+        
+        <br>
+
+        <div class="container">
+            <form method="post" name="formulariogestionar" action="Actualizar" class="formulario">
+                
+                <p>Vuelva a ingresar todos sus datos:</p>
+
+                <table class="formulario">
+                    <tr>
+                        <td>Ingresa el ID del usuario que deseas cambiar:</td>
+                        <td><input type="number" name="idactualizar" id="actualizar" min="01" max="99" size="2"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Nuevo nombre:</label></td>
+                        <td> <input type="text" name="nombre_2" id="nombre_2"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Nuevo Apellido Paterno:</label></td>
+                        <td><input type="text" name="appat_2"  id="appat_2"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Nuevo Apellido Materno:</label></td>
+                        <td><input type="text" name="appmat_2" id="appmat_2"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Nueva Edad:</label></td>
+                        <td><input type="number" name="edad_2" id="edad_2" min="01" max="99" size="2"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Nuevo Correo:</label></td>
+                        <td><input type="email" name="email_2" id="email_2"></td>
+                    </tr>
+                    <tr>
+                        <td><input class="boton borrar" type="reset" value="Borrar Registro"></td>
+                        <td><input class="boton ingresar" type="submit" value="Actualizar Usuario" onclick="cambiar()"></td>
+                    </tr>
+                </table>
             </form>
         </div>
 
