@@ -9,7 +9,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,800;1,500&display=swap" rel="stylesheet">
     </head>
-    <body>
+    <body oncopy="return false" onpaste="return false">
         <div class="container" >
             <form class="formulario" name="formulario" method="post"  
                   action="Registro">
@@ -32,7 +32,7 @@
                     </tr>
                     <tr>
                         <td><label>Edad:</label></td>
-                        <td><input type="number" name="edad" min="01" max="99" size="2"></td>
+                        <td><input type="number" name="edad" id="edad" min="01" max="99" size="2"></td>
                     </tr>
                     <tr>
                         <td><label>Correo:</label></td>
@@ -86,7 +86,7 @@
                     </tr>
                     <tr>
                         <td><label>Nuevo Apellido Materno:</label></td>
-                        <td><input type="text" name="appmat_2" id="appmat_2"></td>
+                        <td><input type="text" name="apmat_2" id="appmat_2"></td>
                     </tr>
                     <tr>
                         <td><label>Nueva Edad:</label></td>
@@ -98,7 +98,7 @@
                     </tr>
                     <tr>
                         <td><input class="boton borrar" type="reset" value="Borrar Registro"></td>
-                        <td><input class="boton ingresar" type="submit" value="Actualizar Usuario" onclick="cambiar()"></td>
+                        <td><input class="boton ingresar" type="submit" value="Actualizar Usuario" onclick="cambiar(event)"></td>
                     </tr>
                 </table>
             </form>

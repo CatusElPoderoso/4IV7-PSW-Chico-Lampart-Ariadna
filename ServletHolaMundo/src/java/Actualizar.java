@@ -76,12 +76,12 @@ public class Actualizar extends HttpServlet {
             /* TODO output your page here. You may use following sample code. */
 
             //manipular los datos del formulario
-            String nom, appat, appmat, correo;
+            String nom, appat, apmat, correo;
             int edad, id;
 
             nom = request.getParameter("nombre_2");
             appat = request.getParameter("appat_2");
-            appmat = request.getParameter("appmat_2");
+            apmat = request.getParameter("apmat_2");
             correo = request.getParameter("email_2");
 
             id = Integer.parseInt(request.getParameter("idactualizar"));
@@ -89,7 +89,7 @@ public class Actualizar extends HttpServlet {
 
             try {
 
-                String q = "update usuarios set nom_usu='" + nom + "',appat_usu='" + appat + "',apmat_usu='" + appmat + "',edad=" + edad + ",email_usu='" + correo + "' where id_usu=" + id;
+                String q = "update usuarios set nom_usu='" + nom + "',appat_usu='" + appat + "',apmat_usu='" + apmat + "',edad_usu=" + edad + ",email_usu='" + correo + "' where id_usu=" + id;
                 set.executeUpdate(q);
 
                 String ql = "select from usuarios where id_usu=" + id;
@@ -106,16 +106,14 @@ public class Actualizar extends HttpServlet {
                 out.println("<br>"
                         + "Tu Apellido Paterno es:" + appat
                         + "<br>"
-                        + "Tu Apellido Materno es:" + appmat
+                        + "Tu Apellido Materno es:" + apmat
                         + "<br>"
                         + "Tu Edad es:" + edad
                         + "<br>"
                         + "Tu correo electronico es:" + correo
                         + "<br>"
-                        + "<br>"
-                        + "<a href='index.html'>Regresar al Formulario</a>"
                         + "<br>");
-                out.println("<a href='Consultar'>Consultar la Tabla General de Usuarios</a>");
+                out.println("<a href='Consultar' class='boton'>Consultar la Tabla General de Usuarios</a>");
                 out.println("</body>");
                 out.println("</html>");
 
