@@ -75,8 +75,8 @@ function cambiar(){
                 event.preventDefault()
 
             }
-        if(document.querySelector('#nombre_2').value.match(letras) || document.querySelector('#appat_2').value.match(letras) ||
-            document.querySelector('#appmat_2').value.match(letras) || document.querySelector('#edad_2').value.match(letras) ||
+        if(document.querySelector('#nombre_2').value.match(letras) && document.querySelector('#appat_2').value.match(letras) &&
+            document.querySelector('#appmat_2').value.match(letras) && document.querySelector('#edad_2').value.match(letras) &&
             document.querySelector('#email_2').value.match(letras)){
 
                 console.log('algun campo contiene letras');
