@@ -16,14 +16,23 @@ em{
     font-style: bold;
 }
 
-.container {
+.container{
     background-color: #e8e8e4;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    display: flex;
+    align-items: center;
 }
 .formulario{
-    width: 600px;
+    width: 500px;
     max-width: 100%;
+    margin: auto;
     margin-top: 30px;
     padding: 20px;
+    box-shadow: 0,0,20px,1px rgba(0,0,0,0.3);
+    position: relative;
+    text-align: justify;
 }
 
 .boton{
@@ -48,14 +57,9 @@ em{
     background: #f8b67d;
 }
 
-.contendorConsultar {
-
-}
-
-.contenedorEliminar {
-
-}
-
-.contenedorActualizar {
-
+.encimar{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
 }
