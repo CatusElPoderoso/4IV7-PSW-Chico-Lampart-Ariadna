@@ -9,7 +9,7 @@ function caracteres(){
         return true;
     }
         if(document.querySelector('#nombre').value.trim()=="" || document.querySelector('#appat').value.trim()=="" ||
-            document.querySelector('#appmat').value.trim()==""){
+            document.querySelector('#appmat').value.trim()=="" || document.querySelector('#edad').value.trim()==""){
             console.log('hay espacios vacíos en registrar usuario')
             alert('Por favor, complete todos los espacios')
             event.preventDefault()
