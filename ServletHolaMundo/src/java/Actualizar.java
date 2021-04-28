@@ -12,7 +12,6 @@ import java.sql.DriverManager;
 import java.sql.Statement;
 //de poder realizar las consultas a la bd
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import javax.servlet.ServletConfig;
 
 /**
@@ -43,11 +42,11 @@ public class Actualizar extends HttpServlet {
     @Override
     public void init(ServletConfig cfg) throws ServletException {
         //para conectarnos con la bd
-        String url;
+        String url = "jdbc:mysql:3306//localhost/registro";
         //driver:gestorbd:puerto//IP/nombrebd
 
         String userName = "root";
-        String password = "";
+        String password = "servidorxd";
 
         try {
 
@@ -87,22 +86,22 @@ public class Actualizar extends HttpServlet {
             appmat = request.getParameter("appmat");
             correo = request.getParameter("email");
 
-            id = Integer.parseInt(request.getParameter("ID"));
+            id = Integer.parseInt(request.getParameter("id_usu"));
             edad = Integer.parseInt(request.getParameter("edad"));
 
             try {
 
-                String q = "update Mregistro set nom_usu='" + nom + "',appat_usu='" + appat + "',apmat_usu='" + appmat + "',edad=" + edad + ",email_usu='" + correo + "' where id_usu=" + id;
+                String q = "update usuarios set nom_usu='" + nom + "',appat_usu='" + appat + "',apmat_usu='" + appmat + "',edad=" + edad + ",email_usu='" + correo + "' where id_usu=" + id;
                 set.executeUpdate(q);
 
-                String ql = "select from Mregistro where id_usu=" + id;
+                String ql = "select from usuarios where id_usu=" + id;
 
                 set = con.createStatement();
 
                 out.println("<!DOCTYPE html>");
                 out.println("<html>");
                 out.println("<head>");
-                out.println("<title>Registro de Usuarios</title>");
+                out.println("<title>Actualizar</title>");
                 out.println("</head>");
                 out.println("<body>"
                         + "<br>Tu nombre es:" + nom);

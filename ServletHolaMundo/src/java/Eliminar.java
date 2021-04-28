@@ -11,7 +11,6 @@ import java.sql.DriverManager;
 import java.sql.Statement;
 //de poder realizar las consultas a la bd
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import javax.servlet.ServletConfig;
 
 /**
@@ -35,13 +34,15 @@ public class Eliminar extends HttpServlet {
     
     //vamos a crear el metodo constructor
     
+    //vamos a crear el metodo constructor
+    
     public void init(ServletConfig cfg) throws ServletException{
         //para conectarnos con la bd
-        String url = "jdbc:mysql:3306//localhost/registro4iv7";
+        String url = "jdbc:mysql:3306//localhost/registro";
                     //driver:gestorbd:puerto//IP/nombrebd
                     
         String userName = "root";
-        String password = "n0m3l0";
+        String password = "servidorxd";
         
         try{
             
@@ -103,6 +104,7 @@ public class Eliminar extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
+            out.println("<link rel=\"stylesheet\" href=\"./CSS/masterstyle.css\">");
             out.println("<title>Servlet Eliminar</title>");            
             out.println("</head>");
             out.println("<body>");
@@ -115,26 +117,26 @@ public class Eliminar extends HttpServlet {
             para poder eliminar es 
             delete from nombretabla where atributo (condicion) valor
             */
-            String q = "delete from mregistro where id_usu = "+id;
+            String q = "delete from usuarios where id_usu = "+id;
             try{
                 
                 set.executeUpdate(q);
                 System.out.println("Registro eliminado con exito");
                 
-                out.println("<h1>Registro Eliminado</h1>");
+                out.println("<h1 class='titulo'>Registro Eliminado</h1>");
             }catch(Exception e){
-                out.println("<h1>Registro No Eliminado, sucedio un error</h1>");
+                out.println("<h1 class='titulo'>Registro No Eliminado, sucedio un error</h1>");
                 System.out.println("Error al eliminar el registro");
                 System.out.println(e.getMessage());
                 System.out.println(e.getStackTrace());
             
             }
 
-            out.println("<a href='index.html'>Regresar al Formulario</a>"
+            out.println("<div class='encimar'><a href='index.html' class='boton'>Regresar al Formulario</a>"
                     + "<br>"
-                    + "<a href='Registro'>Registrar un Nuevo Usuario</a>"
+                    + "<a href='Registro' class='boton'>Registrar un Nuevo Usuario</a>"
                     + "<br>"
-                    + "<a href='Consultar'>Consultar la Tabla General de Usuarios</a>");
+                    + "<a href='Consultar' class='boton'>Consultar la Tabla General de Usuarios</a></div>");
             out.println("</body>");
             out.println("</html>");
         }

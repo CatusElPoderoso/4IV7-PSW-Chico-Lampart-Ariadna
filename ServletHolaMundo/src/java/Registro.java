@@ -47,15 +47,15 @@ public class Registro extends HttpServlet {
     
     public void init(ServletConfig cfg) throws ServletException{
         //para conectarnos con la bd
-        String url = "jdbc:mysql://localhost:3306/registro";
+        String url = "jdbc:mysql:3306//localhost/registro";
                     //driver:gestorbd:puerto//IP/nombrebd
                     
         String userName = "root";
-        String password = "";
+        String password = "servidorxd";
         
         try{
             
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName("com.mysql.jdbc.Driver");
             /*
             a veces el driver ya maneja por defecto el puerto de comunicacion
             es por ello que pueden mandar un error, en ese caso
@@ -114,7 +114,7 @@ public class Registro extends HttpServlet {
                 values ("valor1", 'valor2', valor3, ...)
                 */
                 
-                String q = "insert into Mregistro "
+                String q = "insert into usuarios "
                         + "(nom_usu, appat_usu, apmat_usu, edad_usu, email_usu) "
                         + "values "
                         + "('"+nom+"', '"+appat+"', '"+appmat+"', "+edad+", '"+correo+"')";
@@ -126,14 +126,15 @@ public class Registro extends HttpServlet {
             out.println("<head>");
             out.println("<title>Registro de Usuarios</title>");            
             out.println("</head>");
+            out.println("<link rel=\"stylesheet\" href=\"./CSS/masterstyle.css\">");
             out.println("<body>"
                     + "<br>Tu nombre es: " + nom);
             out.println("<br>"
-                    + "Tu Apellido Paterno es:"+appat
+                    + "Tu Apellido Paterno es: "+appat
                     + "<br>"
-                    + "Tu Apellido Materno es:"+appmat
+                    + "Tu Apellido Materno es: "+appmat
                     + "<br>"
-                    + "Tu Edad es:"+edad
+                    + "Tu Edad es: "+edad
                     + "<br>"
                     + "Tu correo electronico es:"+correo
                     + "<br>");
@@ -147,9 +148,10 @@ public class Registro extends HttpServlet {
                     + "<br>"
                     + "Puerto Host:" + puertoh
                     + "<br>"
-                    + "<a href='index.html'>Regresar al Formulario</a>"
+                    + "<div class='container encimar'>"
+                    + "<a href='index.html' class='boton'>Regresar al Formulario</a>"
                     + "<br>"
-                    + "<a href='Consultar'>Consultar la Tabla General de Usuarios</a>");
+                    + "<a href='Consultar' class='boton'>Consultar la Tabla General de Usuarios</a></div>");
             out.println("</body>");
             out.println("</html>");
             

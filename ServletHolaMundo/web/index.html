@@ -49,25 +49,31 @@
 
         <br>
 
-        <div class="container encimar">
+        <div class="container">
             <form method="get" name="formularioconsultar" action="Consultar">
                 <input class="boton" type="submit" value="Consultar Tabla General de Usuarios" >
-            </form>
-
-            <form method="get" name="formulariogestionar" action="Actualizar">
-                <input class="boton" type="submit" value="Gestionar Tabla General de Usuarios" >
             </form>
         </div>
 
         <br>
 
         <div class="container" >
-            <form method="post" name="formularioeliminar" action="Eliminar" class="">
+            <form method="post" name="formularioeliminar" action="Eliminar">
                 <label>Ingresa el ID del usuario que deseas eliminar</label>
                 <input type="number" name="ideliminar" id="eliminar" min="01" max="99" size="2"  >
-                <input class="boton borrar" type="submit" value="Eliminar Usuario" onclick="numeros()">
+                <input class="boton borrar" type="submit" value="Eliminar Usuario" onclick="borrar()">
             </form>
-        </div>  
+        </div>
+        
+        <br>
+
+        <div class="container">
+            <form method="get" name="formulariogestionar" action="Actualizar">
+                <label>Ingresa el ID del usuario que deseas cambiar</label>
+                <input type="number" name="idactualizar" id="actualizar" min="01" max="99" size="2"  >
+                <input class="boton ingresar" type="submit" value="Gestionar Usuario" onclick="gestionar()">
+            </form>
+        </div>
 
         <br>
 

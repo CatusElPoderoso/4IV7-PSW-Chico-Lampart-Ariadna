@@ -16,6 +16,10 @@ em{
     font-style: bold;
 }
 
+.titulo{
+    text-align: center;
+}
+
 .container{
     background-color: #e8e8e4;
     text-align: center;

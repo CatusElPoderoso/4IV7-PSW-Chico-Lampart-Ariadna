@@ -11,7 +11,6 @@ import java.sql.DriverManager;
 import java.sql.Statement;
 //de poder realizar las consultas a la bd
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import javax.servlet.ServletConfig;
 
 
@@ -38,11 +37,11 @@ public class Consultar extends HttpServlet {
     
     public void init(ServletConfig cfg) throws ServletException{
         //para conectarnos con la bd
-        String url = "jdbc:mysql:3306//localhost/registro4iv7";
+        String url = "jdbc:mysql:3306//localhost/registro";
                     //driver:gestorbd:puerto//IP/nombrebd
                     
         String userName = "root";
-        String password = "n0m3l0";
+        String password = "servidorxd";
         
         try{
             
@@ -52,7 +51,7 @@ public class Consultar extends HttpServlet {
             es por ello que pueden mandar un error, en ese caso
             url = "jdbc:mysql://localhost/registro4iv7";
             */
-            url = "jdbc:mysql://localhost/registro4iv7";
+            url = "jdbc:mysql://localhost/registro";
             con = DriverManager.getConnection(url, userName, password);
             set = con.createStatement();
             
@@ -93,6 +92,7 @@ public class Consultar extends HttpServlet {
             out.println("<title>Servlet Consultar</title>"
                     + "<link>");            
             out.println("</head>");
+            out.println("<link rel=\"stylesheet\" href=\"./CSS/masterstyle.css\">");
             out.println("<body>");
             out.println("<h1>Tabla General De Usuarios</h1>");
             out.println("<table border='2'>"
@@ -110,7 +110,7 @@ public class Consultar extends HttpServlet {
                 String nom, appat, appmat, correo, q;
                 int edad, id;
                 
-                q = "select * from mregistro";
+                q = "select * from usuarios";
                 
                 set = con.createStatement();
                 rs = set.executeQuery(q);
@@ -145,7 +145,7 @@ public class Consultar extends HttpServlet {
             out.println("</tbody>"
                     + "</table>"
                     + "<br>"
-                    + "<a href='index.html'>Regresar al Formulario</a>");
+                    + "<a href='index.html' class='boton'>Regresar al Formulario</a>");
             out.println("</body>");
             out.println("</html>");
         }

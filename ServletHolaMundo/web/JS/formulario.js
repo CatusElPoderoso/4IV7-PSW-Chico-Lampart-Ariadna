@@ -19,7 +19,8 @@ function caracteres(){
                 event.preventDefault()
             }       
 }
-function numeros(){
+
+function borrar(){
     // solo se aceptan numeros sin espacios
     var numeros = /^[0-9]+$/;
 
@@ -28,12 +29,31 @@ function numeros(){
         return true;
     }
         if(document.querySelector('#eliminar').value.trim() == ""){
-            console.log('hay espacios vacíos en borrar usuario')
-            alert('Por favor, ingrese el ID del usuario que desea eliminar')
+            console.log('hay espacios vacíos en borrar usuario');
+            alert('Por favor, ingrese el ID del usuario que desea eliminar');
             event.preventDefault()
         }else{
                 console.log('se trataron de ingresar caracteres distintos a números');
                 alert('Por favor, ingrese únicamente números para eliminar un usuario');
                 event.preventDefault()
+            }
+}
+
+function gestionar(){
+    // solo se aceptan numeros sin espacios
+    var numeros = /^[0-9]+$/;
+    
+    if(document.querySelector('#actualizar').value.match(numeros) && document.querySelector('#actualizar').value.trim() !== ""){
+        console.log('solo hay números');
+        return true;
+    }
+        if(document.querySelector('#actualizar').value.trim() == ""){
+            console.log('hay espacios vacíos en gestionar usuario');
+            alert('Por favor, ingrese el ID del usuario que desea cambiar');
+            event.preventDefault();
+        }else{
+                console.log('se trataron de ingresar caracteres distintos a números');
+                alert('Por favor, ingrese únicamente números para cambiar un usuario');
+                event.preventDefault();
             }
 }
